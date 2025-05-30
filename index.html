@@ -1,1 +1,78 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>?</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.25.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero min-h-screen bg-base-200">
+        <div class="text-center hero-content">
+            <div class="max-w-md">
+                <div id="isi">
+                    <h3 class="text-3xl text-white font-bold mb-5">Happy 1 Month Honey ❤</h3>
+                    <div class="swiper absolute mb-7" style="z-index: -100;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/img/1.jpeg" class="w-full"></div>
+                            <div class="swiper-slide"><img src="assets/img/2.jpeg" class="w-full"></div>
+                            <div class="swiper-slide"><img src="assets/img/3.jpeg" class="w-full"></div>
+                            <div class="swiper-slide"><img src="assets/img/5.jpeg" class="w-full"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white">Thank you for coming into my life and making me the happiest man in the world.</h3>
+                </div>
+                <a href="#my-modal" class="btn btn-primary text-center" id="touch">Touch Me >///<</a> 
+            </div>
+        </div>
+    </div>
+      
+    <div id="my-modal" class="modal">
+        <div class="modal-box">
+        <p>Hai Fely ❤. Thanks for click this button.</p> 
+        <div class="modal-action">
+            <a href="#" class="btn btn-primary" id="next">next?</a> 
+        </div>
+        </div>
+    </div>     
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      <script src="snow.js"></script>
+      <script>
+          $(document).ready(function () {
+            $("#isi").hide();
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                effect: "cards",
+                autoplay: {
+                    delay: 4000,
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+            
+              });
+            $("#touch").click(function(){
+                const audio = new Audio("lagu.mp3");
+                audio.play();
+            });
+            $('#next').click(function(){
+                $("#touch").hide();
+                $("#isi").show();
+            });
+            });
+      </script>
+</body>
+</html>
